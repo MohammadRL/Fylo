@@ -1,0 +1,632 @@
+/* Start Global Variables */
+:root {
+    --first-background-color: #1C2431;
+    --sec-background-color: #181F2A;
+    --text-color: #fff;
+    --section-padding: 100px;
+}
+
+/* End Global Variables */
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--first-background-color);
+    font-family: sans-serif;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End Global Rules */
+/* Start Components */
+.heading {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.heading~p {
+    margin: 30px auto;
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+    .heading {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    .heading~p {
+        font-size: 16px;
+        padding-left: 12px;
+        padding-right: 12px;
+        width: 90%;
+    }
+
+    .heading~p br {
+        display: none;
+    }
+}
+
+/* End Components */
+/* Start Header */
+header {
+
+    margin: 40px auto;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    max-width: 100%;
+}
+
+header .links {
+    list-style-type: none;
+    display: flex;
+
+}
+
+header .links a {
+    color: var(--text-color);
+
+    margin-right: 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+@media(max-width: 767px) {
+    header {
+        margin: 20px auto;
+        padding: 0px 15px;
+    }
+
+    header .logo {
+        flex-basis: 25%;
+    }
+
+    header .links a {
+        font-weight: normal;
+    }
+
+    header .links li:last-child a {
+        margin-right: 0px;
+    }
+}
+
+/* End Header */
+/* Start Landing */
+.landing {
+    min-height: 100vh;
+    position: relative;
+}
+
+.landing img:first-of-type {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+.landing>img:last-of-type {
+    display: none;
+}
+
+.landing .intro {
+    text-align: center;
+    margin: 20px auto 0;
+    width: 700px;
+    max-width: 100%;
+}
+
+.landing .intro a {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+    display: inline-block;
+    border-radius: 25px;
+    padding: 15px 40px;
+    width: 40%;
+    background-image: linear-gradient(45deg, #62DED8, #42b9ff, #3498BF);
+}
+
+@media (max-width: 767px) {
+    .landing {
+        min-height: 78vh;
+    }
+
+    .landing>img:first-of-type {
+        margin-top: 10%;
+        width: 90%;
+    }
+
+    .landing>img:last-of-type {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30%;
+        z-index: -1;
+    }
+
+    .landing .intro a {
+        width: 50%;
+    }
+}
+
+/* End Landing */
+
+/* Start Features */
+.features {
+    position: relative;
+    background-color: var(--sec-background-color);
+    padding-top: var(--section-padding);
+
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 50px 10px;
+    color: var(--text-color);
+    position: relative;
+    padding: 20px;
+    background-color: var(--sec-background-color);
+}
+
+@media (max-width: 767px) {
+    .features .container {
+        grid-template-columns: minmax(250px, 1fr);
+    }
+}
+
+.features>img {
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+}
+
+.features .feat {
+    text-align: center;
+
+}
+
+.feat .text {
+    padding: 20px 45px;
+}
+
+.feat .text h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.feat .text p {
+    line-height: 1.5;
+}
+
+@media (max-width:767px) {
+    .features>img {
+        display: none;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+
+    .feat .text p {
+        margin: 0 auto;
+        width: 80%;
+    }
+}
+
+/* End Features */
+
+/* Start Productive */
+.productive {
+    background-color: var(--sec-background-color);
+    padding-top: var(--section-padding);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.productive .image {
+    flex-basis: 38%;
+}
+
+.productive .image img {
+    max-width: 100%;
+}
+
+
+
+.productive .text {
+    flex-basis: 50%;
+
+
+}
+
+.productive .text .link {
+    display: flex;
+    align-items: center;
+}
+
+.productive .text .link a {
+    color: #62E0D9;
+    text-decoration: underline;
+}
+
+@media (max-width:991px) {
+    .productive {
+        flex-direction: column;
+    }
+
+    .productive .text {
+
+        padding: 40px;
+    }
+}
+
+/* End Productive */
+
+/* Start Testimonials */
+.testimonials {
+    background-color: var(--sec-background-color);
+    padding-top: var(--section-padding);
+
+
+}
+
+.testimonials .holder {
+    padding: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 60px;
+    margin: auto;
+    align-content: space-around;
+    position: relative;
+    z-index: 1;
+
+}
+
+.testimonials .holder .testimonial {
+    background-color: #202A3C;
+    color: var(--text-color);
+    padding: 40px;
+    border-radius: 6px;
+}
+
+.testimonials .holder .testimonial:first-child {
+    position: relative;
+
+}
+
+.testimonials .holder .testimonial:first-child::before {
+    content: url(../images/bg-quotes.png);
+    position: absolute;
+    top: -15%;
+    left: -1%;
+    z-index: -1;
+}
+
+.testimonials .holder .testimonial p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.testimonials .holder .testimonial .writer {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.testimonials .holder .testimonial .writer .profile-img {
+    width: 40px;
+}
+
+.testimonials .holder .testimonial .writer .profile-img img {
+    border-radius: 50%;
+    max-width: 100%;
+}
+
+.testimonials .holder .testimonial .writer .info {
+    margin-left: 5px;
+
+}
+
+.testimonials .holder .testimonial .writer .info .name {
+    font-size: 12px;
+}
+
+.testimonials .holder .testimonial .writer .info .job {
+    font-size: 10px;
+}
+
+section.mail {
+    background-color: #1C2431;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    top: calc(290px /2);
+}
+
+
+section.mail .mail-area {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+section.mail .mail-area input {
+    width: 60%;
+    height: 40px;
+    padding: 25px;
+    display: inline-block;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+}
+
+section.mail .mail-area .submit {
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 15px 40px;
+    background-image: linear-gradient(45deg, #62DED8, #42b9ff, #3498BF);
+    color: var(--text-color);
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+@media (max-width:1199px) {
+    section.mail {
+        width: 70%;
+
+    }
+
+    section.mail .mail-area {
+        flex-direction: column;
+    }
+
+    section.mail .mail-area .submit {
+        margin-top: 20px;
+        font-size: 16px;
+        width: 60%;
+    }
+}
+
+@media (max-width:767px) {
+    .testimonials .holder {
+        padding: 20px;
+    }
+
+    section.mail {
+        width: 90%;
+        padding: 15px;
+    }
+
+    section.mail>p {
+        padding: 0;
+        width: 100%;
+    }
+
+    section.mail .mail-area input {
+        width: 100%;
+    }
+
+    section.mail .mail-area .submit {
+        width: 100%;
+    }
+}
+
+
+/* End Testimonials */
+/* Start Footer */
+footer {
+    background-color: #0B1523;
+    padding-top: calc(2 * var(--section-padding));
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+footer .holder {
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    color: var(--text-color);
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+footer .holder .location {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-basis: 25%;
+}
+
+footer .holder .location p {
+    margin-left: 40px;
+    font-size: 14px;
+    line-height: 1.3;
+
+}
+
+footer .holder .contact {
+    flex-basis: 18%;
+    text-align: center;
+}
+
+footer .holder .contact .box {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* footer .holder .contact .box span {
+    margin-left: 20px;
+} */
+
+footer .holder .links {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 25%;
+}
+
+footer .holder .links li {
+    flex-basis: 50%;
+    margin-bottom: 30px;
+
+}
+
+footer .holder .links li a {
+    color: var(--text-color);
+}
+
+footer .holder .social {
+    position: relative;
+    top: -10px;
+    flex-basis: 25%;
+
+}
+
+footer .holder .social i {
+    font-size: 35px;
+}
+
+footer .holder .social i:not(:first-child) {
+    margin-left: 20px;
+
+}
+
+@media (max-width:1199px) {
+
+    footer .holder .location {
+        flex-basis: 30%;
+    }
+
+    footer .holder .links,
+    footer .contact,
+    footer .holder .social {
+        flex-basis: 20%;
+    }
+}
+
+@media (max-width:991px) {
+    footer .holder .location {
+        flex-basis: 35%;
+    }
+
+    footer .holder .links {
+        flex-basis: 25%;
+    }
+
+    footer .holder .contact {
+        flex-basis: 26%;
+    }
+
+    footer .holder .social {
+        flex-basis: 100%;
+        text-align: center;
+        margin-top: 10px;
+        ;
+    }
+}
+
+@media (max-width:767px) {
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    footer .holder {
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    footer .holder .contact {
+        margin: 20px 0;
+    }
+
+    footer .holder .contact .box {
+        justify-content: flex-start;
+    }
+
+    footer .holder .contact .box span {
+        margin-left: 31px;
+    }
+
+    footer .holder .links {
+        flex-direction: column;
+    }
+
+    footer .holder .social {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* End Footer */
